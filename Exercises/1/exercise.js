@@ -34,13 +34,64 @@
 // 3. Counts how many iterations it took
 // 4. Finally, prints the final number and the iteration count
 
-let number = 1; 
-let iterations = 0; 
+// let number = 1; 
+// let iterations = 0; 
 
-while (number <= 1000) {
-    number += number; // same as number = number + number
-    iterations++;
+// while (number <= 1000) {
+//     number += number; // same as number = number + number
+//     iterations++;
+// };
+
+// console.log(`Final number: ${number}, Iterations: ${iterations}`);
+
+// --- EXERCISE 1.3 --- // 
+
+// ### Exercise: Switch Statement
+
+// Write a switch statement that:
+
+// 1. Takes a variable `day` containing a day of the week (e.g., "Monday")
+// 2. Prints whether the day is a "Weekday", "Weekend", or "Invalid day"
+// 3. Also prints a custom message for each day (e.g., "Monday - Start of the work week!")
+// 4. Test it with at least 3 different day values
+
+function printDay(day) {
+    switch (day) {
+        case "Monday": 
+            console.log("Weekday ");
+            console.log("Monday - First day of the week");
+            break
+        case "Tuesday": 
+            console.log("Weekday ");
+            console.log("Tuesday - Second day of the week");
+            break
+        case "Wednesday": 
+            console.log("Weekday ");
+            console.log("Wednesday - also know as little Saturday");
+            break
+        case "Thursday": 
+            console.log("Weekday ");
+            console.log("Thursday - Almost Friday");
+            break
+        case "Friday": 
+            console.log("Weekday ");
+            console.log("Friday - TGIF");
+            break
+        case "Saturday": 
+            console.log("Weekend");
+            console.log("Saturday - Best day of the weekend")
+            break
+        case "Sunday": 
+            console.log("Weekend");
+            console.log("Sunday - Rest and prep for the week ahead")
+            break
+        default: 
+        console.log("Invalid day")
+    };
+
 };
 
-console.log(`Final number: ${number}, Iterations: ${iterations}`);
-
+printDay("Monday");
+printDay("Saturday");
+printDay("Sunday");
+printDay("Turday");
