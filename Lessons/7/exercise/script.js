@@ -3,28 +3,28 @@
 // ============================================================
 
 // ERROR 1
-lte counter = 0;
+let counter = 0;
 
 // ERROR 2
-const welcomeMessage = "Welcome to the Debug Challenge!;
+const welcomeMessage = "Welcome to the Debug Challenge!";
 
 // ERROR 3
-const class = "container";
+const container = "container";
 
 // ERROR 4
-let userName = "Guest"
-let userEmail = "guest@example.com"
+let userName = "Guest";
+let userEmail = "guest@example.com";
 
 // ERROR 5
-const MAX_USERS = 100;
+let MAX_USERS = 100;
 MAX_USERS = 200;
 
 // ERROR 6
-const colors = ["red", "green" "blue", "yellow"];
+const colors = ["red", "green", "blue", "yellow"];
 
 // ERROR 7
 const user = {
-    name "John",
+    name: "John",
     age: 25,
     email: "john@example.com"
 };
@@ -34,10 +34,10 @@ function greetUser(name) {
     console.log("Hello, " + name);
     if (name === "Admin") {
         console.log("Welcome, Admin!");
-    
+    }};
 
 // ERROR 9
-const multiply = (a, b) > {
+const multiply = (a, b) => {
     return a * b;
 };
 
@@ -46,27 +46,27 @@ function addNumbers() {
     const num1 = document.getElementById("num1").value;
     const num2 = document.getElementById("num2").value;
     const result = parseInt(num1) + parseInt(num2);
-    document.getElementById("calcResult".textContent = result;
+    document.getElementById("calcResult".textContent) = result;
 }
 
 // ERROR 11
 function multiplyNumbers() {
     const num1 = document.getElementById("num1").value;
     const num2 = document.getElementById("num2").value;
-    const result = num1 * num2;
-    document.getElementById("calcresult").textContent = result;
+    const result = parseInt(num1) + parseInt(num2);
+    document.getElementById("calcResult").textContent = result;
 }
 
 // ERROR 12
 function divideNumbers() {
     const num1 = document.getElementById("num1").value;
     const num2 = document.getElementById("num2").value;
-    const result = num1 + num2;
+    const result = parseInt(num1) + parseInt(num2);
     document.getElementById("calcResult").textContent = result;
 }
 
 // ERROR 13 & 14 & 15
-function registeruser() {
+function registerUser() {
     const username = document.getElementByld("username").value;
     const email = document.getElementById("email").value;
     const age = document.getElementById("age").value;
@@ -83,7 +83,7 @@ function registeruser() {
 incrementCounter() {
     counter++;
     document.getElementById("counter-display").textContent = counter;
-}
+};
 
 // ERROR 17
 function decrementCounter() {
