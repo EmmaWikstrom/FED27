@@ -19,7 +19,8 @@ const z = 30;
 
 x = 15;
 y = 25;
-// z = 35; // What happens if you uncomment this?
+// z = 35; // What happens if you uncomment this? 
+// it wont run (TypeError) since z is a const. 
 
 console.log(x, y, z);
 ```
@@ -34,6 +35,7 @@ console.log(a);
 // console.log(b);
 // let b = 10;
 // Why is the above commented out?
+// because b's value will be placed in the deadzone, and can therefore not be read before the declaration
 ```
 
 **Snippet C:**
@@ -46,7 +48,8 @@ for (var i = 0; i < 3; i++) {
 }
 
 console.log('counter:', counter);
-console.log('i:', i); // What is the value of i?
+console.log('i:', i); // What is the value of i? 
+// It is 3, the loop goes until 2, and then adds one more to counter with ++
 ```
 
 ### Exercise 2: Type Coercion
@@ -75,7 +78,15 @@ console.log({} + []); // ?
 Write a function `sumOfMultiples` that takes a number `n` and returns the sum of all numbers below `n` that are multiples of 3 or 5.
 
 ```javascript
-// Your code here
+function sumOfMultiples(n) {
+    let result = 0;
+    for (let i = 0; i < n; i++) {
+        if (i % 3  === 0 || i % 5 === 0) {
+        result += i
+    }
+}
+    return result;
+}
 
 console.log(sumOfMultiples(10)); // 23 (3 + 5 + 6 + 9)
 console.log(sumOfMultiples(20)); // 78
@@ -87,7 +98,15 @@ console.log(sumOfMultiples(100)); // 2318
 Write a function `isPrime` that takes a number and returns `true` if it's a prime number, `false` otherwise.
 
 ```javascript
-// Your code here
+function isPrime(n) {
+    if (n < 2) return false;
+
+    for (let i = 2; i < n; i++) {
+        if (n % i === 0) return false;
+    }
+
+    return true;
+}
 
 console.log(isPrime(2)); // true
 console.log(isPrime(7)); // true
@@ -101,7 +120,13 @@ console.log(isPrime(97)); // true
 Using your `isPrime` function, write a function `generatePrimes` that returns an array of all prime numbers up to and including `n`.
 
 ```javascript
-// Your code here
+function generatePrimes(n) {
+    let primes = [];
+    for (let i =2; i <= n; i ++ ){
+        if (isPrime(i)) 
+            primes.push(i)
+    } return primes
+}
 
 console.log(generatePrimes(20)); // [2, 3, 5, 7, 11, 13, 17, 19]
 console.log(generatePrimes(10)); // [2, 3, 5, 7]
@@ -116,7 +141,16 @@ console.log(generatePrimes(10)); // [2, 3, 5, 7]
 Write a function `countVowels` that takes a string and returns the number of vowels (a, e, i, o, u) in it. It should be case-insensitive.
 
 ```javascript
-// Your code here
+function countVowels(str) {
+    let count = 0;
+    str = str.toLowerCase();
+
+    for (let i = 0; i < str.length; i++) { 
+        if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') { 
+            count++;
+        }
+    } return count; 
+}
 
 console.log(countVowels('hello')); // 2
 console.log(countVowels('AEIOU')); // 5
