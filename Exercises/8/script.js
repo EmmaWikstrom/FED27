@@ -7,7 +7,13 @@
 
 // Exercise 3: Sum of Multiples (Exercises 1-2 are in Exercise.md only)
 function sumOfMultiples(n) {
-    // Your code here
+    let result = 0;
+    for (let i = 0; i < n; i++) {
+        if (i % 3  === 0 || i % 5 === 0) {
+        result += i
+    }
+}
+    return result;
 }
 
 console.log(sumOfMultiples(10)); // 23
@@ -27,7 +33,11 @@ console.log(isPrime(97)); // true
 
 // Exercise 5: Generate Primes
 function generatePrimes(n) {
-    // Your code here
+    let primes = [];
+    for (let i =2; i <= n; i ++ ){
+        if (isPrime(i)) 
+            primes.push(i)
+    } return primes
 }
 
 console.log(generatePrimes(20)); // [2, 3, 5, 7, 11, 13, 17, 19]
